@@ -1,0 +1,17 @@
+server:
+  port: 4002
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+spring:
+  jpa:
+    hibernate.ddl-auto: update
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST}:${MYSQL_PORT}/${MYSQL_DB}
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
